@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+DESTDIR=$(CURDIR)/debian/tmp
+include /usr/share/ocaml/ocamlvars.mk
+OCAMLFIND_DESTDIR=$(DESTDIR)/$(OCAML_STDLIB_DIR)
+export OCAMLFIND_DESTDIR
+OCAMLFIND_LDCONF=ignore
+export OCAMLFIND_LDCONF
+
+%:
+	dh $@ --with ocaml
+
+.PHONY: override_dh_auto_install
+override_dh_auto_install:
+	install -d $(OCAMLFIND_DESTDIR)
+	dh_auto_install

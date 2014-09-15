@@ -1,0 +1,3 @@
+@OCamlStdlibDir@/piqirun/*.cmi
+@OCamlStdlibDir@/piqirun/*.mli
+@OCamlStdlibDir@/piqirun/*.ml

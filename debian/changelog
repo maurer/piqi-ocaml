@@ -1,0 +1,5 @@
+piqi-ocaml (0.7.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #761498)
+
+ -- Matthew Maurer <maurer@matthewmaurer.org>  Sun, 14 Sep 2014 10:38:18 +0000

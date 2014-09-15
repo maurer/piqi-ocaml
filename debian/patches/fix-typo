@@ -1,0 +1,24 @@
+Description: depreacted -> DEPRECATED
+ Fix a small typo in the builtin help for piqic-ocaml
+ piqi-ocaml (0.7.2-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #761498)
+Author: Matthew Maurer <maurer@matthewmaurer.org>
+Bug-Debian: https://bugs.debian.org/761498
+
+---
+
+Origin: vendor
+Forwarded: no
+
+--- piqi-ocaml-0.7.2.orig/piqic-ocaml/piqic_ocaml.ml
++++ piqi-ocaml-0.7.2/piqic-ocaml/piqic_ocaml.ml
+@@ -48,7 +48,7 @@ let arg__reserved_name =
+ 
+ let arg__gen_defaults =
+   "--gen-defaults", Arg.Set flag_gen_defaults,
+-    "(depreacted) always enabled: generate default value constructors for generated types"
++    "(DEPRECATED) always enabled: generate default value constructors for generated types"
+ 
+ let arg__gen_preserve_unknown_fields =
+   "--gen-preserve-unknown-fields", Arg.Set C.flag_gen_preserve_unknown_fields,

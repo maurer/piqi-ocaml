@@ -1,0 +1,2 @@
+version=3
+https://github.com/alavrik/piqi-ocaml/releases /.*/archive/v([\d\.]+)\.tar\.gz
