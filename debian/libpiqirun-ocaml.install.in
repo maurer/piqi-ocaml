@@ -1,3 +1,0 @@
-@OCamlStdlibDir@/piqirun/*.o
-@OCamlStdlibDir@/piqirun/META
-@OCamlStdlibDir@/piqirun/*.cmx

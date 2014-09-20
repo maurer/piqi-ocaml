@@ -1,3 +1,6 @@
+@OCamlStdlibDir@/piqirun/META
+@OCamlStdlibDir@/piqirun/*.o
+@OCamlStdlibDir@/piqirun/*.cmx
 @OCamlStdlibDir@/piqirun/*.cmi
 @OCamlStdlibDir@/piqirun/*.mli
 @OCamlStdlibDir@/piqirun/*.ml

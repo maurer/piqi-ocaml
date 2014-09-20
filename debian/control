@@ -12,28 +12,11 @@ Standards-Version: 3.9.5
 Section: ocaml
 Homepage: https://github.com/alavrik/piqi-ocaml/
 
-Package: piqic-ocaml
-Architecture: any
-Depends:
-  piqi,
-  ${shlibs:Depends},
-  ${misc:Depends}
-Description: Piqi to OCaml Compiler
- Piqi is a multi-format data serialization system for OCaml.
- It provides a uniform interface for serializing OCaml data structures to
- JSON, XML and Protocol Buffers formats.
- .
- This package compiles .piqi files to OCaml source code.
- .
- The generated files need libpiqi-ocaml to run, and libpiqirun-ocaml-dev to
- build against, as they provide the runtime for the serialization and
- deserialization.
-
-
 Package: libpiqirun-ocaml-dev
 Architecture: any
 Depends:
   ${ocaml:Depends},
+  piqi,
   ocaml-findlib,
   ${shlibs:Depends},
   ${misc:Depends}
@@ -43,22 +26,8 @@ Description: Piqi OCaml Runtime Development Files
  It provides a uniform interface for serializing OCaml data structures to
  JSON, XML and Protocol Buffers formats.
  .
- This package provides the necessary libraries to write OCaml
- programs which use data serialized in Piqi compatible formats.
-
-Package: libpiqirun-ocaml
-Architecture: any
-Depends:
-  ${ocaml:Depends},
-  ocaml-findlib,
-  ${shlibs:Depends},
-  ${misc:Depends}
-Provides: ${ocaml:Depends}
-Description: Piqi OCaml Runtime
- Piqi is a multi-format data serialization system for OCaml.
- It provides a uniform interface for serializing OCaml data structures to
- JSON, XML and Protocol Buffers formats.
+ piqic-ocaml compiles .piqi files to OCaml source code which can serialize
+ and deserialize that particular schema
  .
- This package provides the necessary libraries to run OCaml
+ This package provides the necessary libraries and programs to write OCaml
  programs which use data serialized in Piqi compatible formats.
-
