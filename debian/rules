@@ -1,11 +1,12 @@
 #!/usr/bin/make -f
 
-DESTDIR=$(CURDIR)/debian/tmp
 include /usr/share/ocaml/ocamlvars.mk
+export DESTDIR=$(CURDIR)/debian/libpiqirun-ocaml-dev
 OCAMLFIND_DESTDIR=$(DESTDIR)/$(OCAML_STDLIB_DIR)
 export OCAMLFIND_DESTDIR
 OCAMLFIND_LDCONF=ignore
 export OCAMLFIND_LDCONF
+export DESTDIR
 
 %:
 	dh $@ --with ocaml
@@ -14,3 +15,5 @@ export OCAMLFIND_LDCONF
 override_dh_auto_install:
 	install -d $(OCAMLFIND_DESTDIR)
 	dh_auto_install
+	install -d $(DESTDIR)/usr/bin
+	mv $(DESTDIR)/bin/piqic-ocaml $(DESTDIR)/usr/bin/piqic-ocaml
